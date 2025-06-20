@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5501/ -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link rel="stylesheet" href="./Document_files/style.css"></head>
+<body>
+    <header>
+        <h1>Indice de Masse corporelle</h1>
+    </header>
+    <nav>
+        <ul id="liens">
+            <li class="liens"><a href="http://127.0.0.1:5501/index.HTML">A propos</a></li>
+            <li class="liens"><a href="http://127.0.0.1:5501/calcul.HTML">Calculer votre IMC</a></li>
+            <li class="liens"><a href="http://127.0.0.1:5501/contact.HTML">Contact</a></li>
+            <li class="liens"><a href="http://127.0.0.1:5501/astus.HTML">Astus</a></li>
+        </ul>
+    </nav>
+    <button id="btn-menu">Menu</button>
+    <div id="navbar-cache">
+        <div id="navbar-content">
+            <div id="navbar-header"></div>
+            <ul id="liens">
+                <li class="liens"><a href="http://127.0.0.1:5501/index.HTML">A propos</a></li>
+                <li class="liens"><a href="http://127.0.0.1:5501/calcul.HTML">Calculer votre IMC</a></li>
+                <li class="liens"><a href="http://127.0.0.1:5501/contact.HTML">Contact</a></li>
+                <li class="liens"><a href="http://127.0.0.1:5501/astus.HTML">Astus</a></li>
+            </ul>
+        </div>
+        <div id="navbar-clicable"></div>
+    </div>
+    <main>
+        <section id="apropos">A propos</section>
+        <h2>Qu'est-ce que l'IMC&nbsp;?</h2>
+        <p>Étant un outil utilisé pour évaluer le poids par rapport à la taille d'une personne, l'IMC...</p>
+        <h2>Pourquoi l'IMC&nbsp;?</h2>
+        <p>Il est primordial de fournir un moyen facile d'évaluer et de sensibiliser la population à la problématique du surpoids et de l'obésité. Pour cela, nous proposons des articles informatifs sur les enjeux de la santé liés au poids, des recommandations sur la nutrition et des astuces pour intégrer l'activité physique dans votre quotidien.</p>
+    </main>
+    <h3>Tableau des catégories d'indice de masse corporelle</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Interprétation</th>
+                <th>Indice</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="poids_insuffisant"><td>Poids insuffisant</td><td>53,3kg</td></tr>
+            <tr class="poids_normal"><td>Poids normal</td><td>53,3kg-72,5kg</td></tr>
+            <tr class="surpoids"><td>Surpoids</td><td>72,5-87kg</td></tr>
+            <tr class="obesite"><td>Obésité</td><td>87-102kg</td></tr>
+            <tr class="obesite_severe"><td>Obésité sévère</td><td>102kg ou plus</td></tr>
+        </tbody>
+    </table>
+    <section>
+        <h2>A quelle fréquence calculer mon IMC ?</h2>
+        <p>Pour un adulte en bonne santé, une à deux fois par an suffisent. En revanche, un suivi fréquent peut être intéressant si vous avez pris ou perdu du poids de manière rapide, si vous suivez un programme de perte ou de prise de poids ou encore si vous avez un problème de santé ayant des implications sur le poids.</p>
+        <h3>Pour les femmes enceintes :</h3>
+        <p>Calculer son IMC régulièrement pendant la grossesse peut être intéressant (sous supervision d'un professionnel de santé).</p>
+    </section>
+    <script>
+        const monbouton = document.getElementById("btn-menu");
+        const menuCache = document.getElementById("navbar-cache");
+        const closebouton = document.getElementById("navbar-clicable");
+         monbouton.addEventListener("click", function() {
+            menuCache.style.display = "flex";});
+        closebouton.addEventListener("click", function() {
+            menuCache.style.display = "none";});
+    </script>
+    <footer>
+        <p>©2025 inakalajoie</p>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
