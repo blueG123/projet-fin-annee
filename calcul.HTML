@@ -1,134 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-            background-image: url(./OPG.jpg);
-        }
-        header{
-            background:  rgba(245, 245, 245, 0);
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav{
-            display: flex;
-            justify-content: center;
-        }
-        nav a:hover{
-            background-color: rgba(255, 228, 196, 0.614);
-            color: #000000f1;
-            padding: 5px;
-            border-radius: 10px;
-
-        }
-        ul{
-            display: flex;
-            list-style: none;
-            gap: 24px;
-        }
-        li{
-            position: relative;
-            text-decoration: none;
-        }
-        nav a{
-            color:black;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        main{
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 5px;
-            box-shadow: 0 0 10px;
-        }
-        h2{
-            color: #4ca5afd8;
-        }
-        h1{
-            color: maroon;
-        }
-        form{
-            display: flex;
-            flex-direction: column;
-        }
-        label{
-            margin: 10px;
-        }
-        section{
-            color: aliceblue;
-        }
-        footer{
-            text-align: center;
-            padding: 10px 0;
-            background: #4caf50;
-            color: white;
-            position: relative;
-
-        }
-
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(128, 0, 0, 0.242);
+        justify-content: center;
+        align-items: center;
+      }
+      header {
+        background: rgba(245, 245, 245, 0);
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+      nav a:hover {
+        background-color: rgba(255, 228, 196, 0.614);
+        color: #000000f1;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+      }
+      li {
+        position: relative;
+        text-decoration: none;
+      }
+      nav a {
+        color: black;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+      }
+      main {
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 5px;
+        box-shadow: 0 0 10px;
+      }
+      h2 {
+        color: #4ca5afd8;
+      }
+      h1 {
+        color: maroon;
+        background: linear-gradient(
+          to right,
+          rgba(255, 228, 196, 0.614),
+          rgba(255, 228, 196, 0.614)
+        );
+      }
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+       
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 200PX;
+      }
+      .form-container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        background: rgba(255, 228, 196, 0.614);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        background-color: #af4c759b;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        
+      }
+      label {
+        margin: 10px;
+        font-size: 10px;
+      }
+      section {
+        color: rgba(128, 0, 0, 0.42);
+      }
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background: #4caf50;
+        color: white;
+        position: relative;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>calculons ensemble notre imc</h1>
+      <h1>calculons ensemble notre imc</h1>
     </header>
     <nav>
-        <a href="projet.HTML">A propos</a>
-        <a href="calcul.HTML">calculer votre imc</a>
-        <a href="contact.HTML">contact</a>
-        <a href="astus.HTML">astus</a>
+      <a href="index.HTML">A propos</a>
+      <a href="calcul.HTML">calculer votre imc</a>
+      <a href="contact.HTML">contact</a>
+      <a href="astus.HTML">astus</a>
     </nav>
     <section>
-        <div id="container"></div>
+      <div class="form-container">
         <h1>calculer votre imc</h1>
         <label for="taille">taille(en cm):</label>
-        <input type="number" id="taille" placeholder="votre taille en cm">
-        <label for="poids">poids(en kg)</label>
-        <input type="number" id="poids" placeholder="votre poids en kg">
-           <button onclick="calculerimc()">calculer</button>
-           <div id="resultat"></div>
-           <div id="conseil"></div>
-           <script>
-            function calculerimc() {
-                let taille=document.getElementbyid("taille").value;
-                let poids=document.getElementById("poids").value;
-               // validation des entrees
-                if (taille ==="" , poids ==="");
-            }
-            
-       {
-        alert("veuillez entrer votre taille et votre poids.");
-        return;
-       }
-       taille=taille/100;//convertir cm en m
-       let imc = poids/(taille*taille);
-       imc = imc.tofixed(2);
-       document.getElementById("resultat").innerText="votre imc est:"+ imc;
-       let conseil ="";
-       if(imc < 53.5){
-        conseil ="vous etes en insuffisance pondérale;Essayez de manger plus et de consulter un médecin."
-       }else if (imc<=72,5){
-        conseil="votre poids est normal,continuez ainsi "
-       }else if (imc<=87){
-        conseil="vous ets en surpoids.Envisagez de faire plus d'exercice et de mangez plus sainement."
-       }else{
-        conseil="vous etes en obésité,il est recommandé de consulter un médecin et d'adopter un mode de vie plus sain."
-       }
-      
-    { document.getElementById("conseil").innerText="conseil:"+ conseil;}
-
-           </script>
+        <input type="number" id="taille" placeholder="votre taille en cm" /><br />
+        <label for="poids">poids(en kg):</label>
+        <input type="number" id="poids" placeholder="votre poids en kg" /><br />
+        <button onclick="calculerimc()">calculer</button>
+        <div id="resultat"></div>
+        <div id="conseil"></div>
+      </div>
+      <script>
+        function calculerimc() {
+          let taille = parseFloat(document.getElementById("taille").value);
+          let poids = parseFloat(document.getElementById("poids").value);
+          // validation des entrees
+          if (taille === "" || poids ===  "") {
+            alert("veuillez entrer votre taille et votre poids.");
+            return;
+          }
         
+          let imc =  (poids/(taille * taille));
+          imc = imc.toFixed(2);
+          document.getElementById("resultat").innerText = "votre imc est: " + imc;
+          let conseil = "";
+          if (imc < 18.5) {
+            conseil =
+              "vous etes en insuffisance pondérale; Essayez de manger plus et de consulter un médecin.";
+          } else if (imc < 25) {
+            conseil = "votre poids est normal, continuez ainsi.";
+          } else if (imc < 30) {
+            conseil =
+              "vous êtes en surpoids. Envisagez de faire plus d'exercice et de manger plus sainement.";
+          } else {
+            conseil =
+              "vous êtes en obésité, il est recommandé de consulter un médecin et d'adopter un mode de vie plus sain.";
+          }
+           document.getElementById("conseil").innerText = "conseil: " + conseil;
+        
+          // Affichage du résultat
+        }
+
+      </script>
     </section>
-   
+  </body>
+</html>

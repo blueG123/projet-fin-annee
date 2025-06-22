@@ -1,104 +1,225 @@
-  body{
-           font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-            background-image: url(./WhatsApp\ Image\ 2025-04-26\ à\ 07.13.23_ab66f9d1.jpg);
+ body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fff 60%, rgba(0,0,0,0.1) 100%), url(./WhatsApp\ Image\ 2025-04-26\ à\ 07.13.23_ab66f9d1.jpg) right center/50% 100% no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+header {
+    color: maroon;
+    padding: 40px 0 10px 0;
+    text-align: right;
+    background: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 2px 10px #ccc;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10%;
+}
+nav a:hover {
+    background-color: wheat;
+    padding: 5px;
+    border-radius: 10px;
+    justify-content: safe;
+}
+h1 {
+    color: rgba(128, 0, 0, 0.85);
+    text-align: left;
+    padding-left: 10%;
+    font-family: poppins, sans-serif;
+    margin: 0;
+}
+       
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+th, td {
+    border: 5px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.poids_insuffisant {
+    background-color: #f2f2f2;
+}
+.poids_normal {
+    background-color: #f2f2f2;
+}
+.surpoids {
+    background-color: #f2f2f2;
+}
+.obesite {
+    background-color: #f2f2f2;
+}
+.obesite_severe {
+    background-color: #f2f2f2;
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+h3 {
+    color: maroon;
+    padding: 10px;
+    text-align: center;
+}
+li {
+    position: relative;
+    text-decoration: none;
+    color: maroon;
+}
+nav a {
+    color: maroon;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid maroon;
+    border-radius: 50%;
+}
+.apropos {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+}
+h2 {
+    color: maroon;
+    padding: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:#af4c757d ;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+label {
+    margin: 10px;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4caf50;
+    color: white;
+    position: relative;
+}
+         #btn-menu {
+            display: none;
         }
-        header{
-            color: maroon;
-            padding: 10px 0;
-            text-align: right;
+        #navbar-cache {
+            display: none;
         }
-        nav{
-            display: flex;
-            justify-content: right;
-            border-radius: 10%;
+        
+
+  @media (max-width: 800px) {
+            #navbar-cache {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            #btn-menu {
+                display: block;
+                background-image: url(./WhatsApp\ Image\ 2025-04-26\ à\ 07.13.23_ab66f9d1.jpg);
+                color: maroon;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            #navbar #liens {
+                display: none;
+                color: #000;
+            }
+            #navbar-cache {
+                display: none;
+                flex-direction: row;
+                align-items: start;
+                background-color: rgba(0, 0, 0, 0.7);
+                position: fixed;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color: black;
+            }
+            #navbar-content {
+                background: white;
+                padding: 10px 20px;
+                height: 100%;
+                width: 300px;
+            }
+            #navbar-clicable {
+                background: transparent;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            #navbar-cache .liens {
+                list-style: none;
+                margin: 5px;
+                background: white;
+                padding: 10px;
+                border-radius: 35px;
+            }
+            #navbar-cache .liens a {
+                text-decoration: none;
+                color: inherit;
+            }
+            
+            #navbar-cache #liens {
+                display: flex;
+                flex-direction: column;
+            }
         }
-        nav a:hover{
-            background-color: wheat;
-            padding: 5px;
-            border-radius: 10px;
-        }
-        h1{
-            color:rgba(128, 0, 0, 0.696);
-            text-align: left;
-            padding-left: 10%;
-        }
-        table{
-            width: 80%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-        th,td{
-            border: 5px solid #333;
-            padding: 8px;
-            text-align: left;
-        }
-        th{
-            background-color: #f2f2f2;
-        }
-        .poids_insuffisant{
-            background-color: #f2f2f2;
-        }
-        .poids_normal{
-            background-color: #f2f2f2;
-        }
-        .surpoids{
-            background-color: #f2f2f2;
-        }
-        .obesite{
-            background-color: #f2f2f2;
-        }
-        .obesite_severe{
-            background-color: #f2f2f2;
-        }
-        ul{
-            display: flex;
-            list-style: none;
-            gap: 24px;
-        }
-        h3{
-            color: maroon;
-            padding: 10px;
-            text-align: center;
-        }
-        li{
-            position: relative;
-            text-decoration: none;
-            color: maroon;
-        }
-        nav a{
-            color:maroon;
-            padding: 10px 20px;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid maroon;
-            border-radius:50%;
-        }
-        main{
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        h2{
-            color:maroon;
-            padding: 10px;
-        }
-        form{
-            display: flex;
-            flex-direction: column;
-        }
-        label{
-            margin: 10px;
-        }
-        footer{
-            text-align: center;
-            padding: 10px 0;
-            background: #4caf50;
-            color: white;
-            position: relative;
-        }
-    
+main, section, table, h3 {
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    margin-right: 30%; /* Laisse de la place à droite pour l'image */
+    padding: 20px;
+}
+@media (max-width: 900px) {
+    body {
+        background: #fff;
+    }
+    main, section, table, h3 {
+        margin-right: 0;
+    }
+}

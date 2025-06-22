@@ -1,80 +1,97 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)http://127.0.0.1:5501/index.HTML -->
-<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0032)http://127.0.0.1:5501/astus.HTML -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <link rel="stylesheet" href="./Document_files/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
     <title>Document</title>
-    
-</head>
-<body>
-    <header>
-        <h1>Indice de Masse corporelle</h1>
-    </header>
-    <nav>
-        <ul id="liens">
-            <li class="liens"><a href="http://127.0.0.1:5501/index.HTML">A propos</a></li>
-            <li class="liens"><a href="http://127.0.0.1:5501/calcul.HTML">Calculer votre IMC</a></li>
-            <li class="liens"><a href="http://127.0.0.1:5501/contact.HTML">Contact</a></li>
-            <li class="liens"><a href="http://127.0.0.1:5501/astus.HTML">Astus</a></li>
-        </ul>
-    </nav>
-    <button id="btn-menu">Menu</button>
-    <div id="navbar-cache">
-        <div id="navbar-content">
-            <div id="navbar-header"></div>
-            <ul id="liens">
-                <li class="liens"><a href="http://127.0.0.1:5501/index.HTML">A propos</a></li>
-                <li class="liens"><a href="http://127.0.0.1:5501/calcul.HTML">Calculer votre IMC</a></li>
-                <li class="liens"><a href="http://127.0.0.1:5501/contact.HTML">Contact</a></li>
-                <li class="liens"><a href="http://127.0.0.1:5501/astus.HTML">Astus</a></li>
-            </ul>
-        </div>
-        <div id="navbar-clicable"></div>
-    </div>
-    <main>
-        <section id="apropos" style="opacity: 1; transform: translateY(0px); transition: 1s;">A propos</section>
-        <h2 style="transform: scale(1); transition: transform 0.3s;">Qu'est-ce que l'IMC&nbsp;?</h2>
-        <p>Étant un outil utilisé pour évaluer le poids par rapport à la taille d'une personne, l'IMC...</p>
-        <h2 style="transform: scale(1); transition: transform 0.3s;">Pourquoi l'IMC&nbsp;?</h2>
-        <p>Il est primordial de fournir un moyen facile d'évaluer et de sensibiliser la population à la problématique du surpoids et de l'obésité. Pour cela, nous proposons des articles informatifs sur les enjeux de la santé liés au poids, des recommandations sur la nutrition et des astuces pour intégrer l'activité physique dans votre quotidien.</p>
-    </main>
-    <h3>Tableau des catégories d'indice de masse corporelle</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Interprétation</th>
-                <th>Indice</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="poids_insuffisant"><td>Poids insuffisant</td><td>53,3kg</td></tr>
-            <tr class="poids_normal"><td>Poids normal</td><td>53,3kg-72,5kg</td></tr>
-            <tr class="surpoids"><td>Surpoids</td><td>72,5-87kg</td></tr>
-            <tr class="obesite"><td>Obésité</td><td>87-102kg</td></tr>
-            <tr class="obesite_severe"><td>Obésité sévère</td><td>102kg ou plus</td></tr>
-        </tbody>
-    </table>
-    <section>
-        <h2>A quelle fréquence calculer mon IMC ?</h2>
-        <p>Pour un adulte en bonne santé, une à deux fois par an suffisent. En revanche, un suivi fréquent peut être intéressant si vous avez pris ou perdu du poids de manière rapide, si vous suivez un programme de perte ou de prise de poids ou encore si vous avez un problème de santé ayant des implications sur le poids.</p>
-        <h3>Pour les femmes enceintes :</h3>
-        <p>Calculer son IMC régulièrement pendant la grossesse peut être intéressant (sous supervision d'un professionnel de santé).</p>
-    </section>
-    <script>
-        const monbouton = document.getElementById("btn-menu");
-        const menuCache = document.getElementById("navbar-cache");
-        const closebouton = document.getElementById("navbar-clicable");
-         monbouton.addEventListener("click", function() {
-            menuCache.style.display = "flex";});
-        closebouton.addEventListener("click", function() {
-            menuCache.style.display = "none";});
-    </script>
-    <footer>
-        <p>©2025 inakalajoie</p>
-    </footer>
-    <script src="./Document_files/main.js.téléchargement"></script>  
+    <style>
+        body{
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(./WhatsApp\ Image\ 2025-04-26\ à\ 07.13.23_ab66f9d1.jpg);
+            position: relative;
+        }
+        header{
+            color: maroon;
+            padding: 40px 0 10px 0;
+            text-align: center;
+            background: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 2px 10px #ccc;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            
+        }
+        nav a:hover{
+            background-color: rgba(255, 228, 196, 0.614);
+            color: #000000f1;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+        li{
+            position: relative;
+            text-decoration: none;
+        }
+        h1{
+            color: maroon;
+            margin: 0;
+        }
+        nav a{
+            color: black;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        main{
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.774);
+            border-radius: 5px;
+            box-shadow: 5px;
+            box-shadow: 0 0 10px;
+        }
+        h2{
+            color: black;
+            text-align: center;
+        }
+        h3{
+            color: #000000;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        section{
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 8px;
+
+        }
+        label{
+            margin: 10px;
+        }
+        footer{
+            text-align: center;
+            padding: 10px 0;
+            background: #4caf4ff6;
+            color: white;
+            position: relative;
+
+        }
+
+    </style>
 <!-- Code injected by live-server -->
 <script>
 	// <![CDATA[  <-- For SVG support
@@ -113,5 +130,40 @@
 	}
 	// ]]>
 </script>
+</head>
+<body>
+    <header>
+        <h1>bienvenue sur notre page d'astuces</h1>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:5501/index.HTML">A propos</a>
+        <a href="http://127.0.0.1:5501/calcul.HTML">calculer votre imc</a>
+        <a href="http://127.0.0.1:5501/contact.HTML">contact</a>
+        <a href="http://127.0.0.1:5501/astus.HTML">astus</a>
+    </nav>
+    <section>
+        <h2>Parlons plus clair sur l'imc et voici quelques orientations nécessaire pour votre santé</h2>
+        <p>pour l'imc d'abord nous notons qu'il est different pour les enfants et les adultes ,il est souvent calculé suivant votre age :
+            </p><h3>A.poids insuffisant:</h3>
+               <p> 1.CONSULATION MEDICALE :consultez un professionnel de santé pour determiner les cquses sous jacentes du faible poids et élaborer un plan d'action.</p>
+                <p>2.ALIMENTATION EQUILIBREE:intégrez des aliments riches en calories comme les noix, les avocats et les produits laitiers.</p>
+                <p>3.REPAS FREQUANT:Mangez plusieurs petits repas tout au long de la journée pour augmenter votre apport calorique.
+                </p>
+                <h3>B.poids normal:</h3>
+                <p>1.MAINTIEN D'UN MODE DE VIE SAIN:continuez à suivre un régime équilibrée et un programme d'exercise regulier pour maintenir votre poids.</p>
+                <p>2.SURVEILLANCE DU POIDS: gardez un oeil sur votre poids et votre alimentqtion pour éviter un changement significatif</p>
+                <p>3.HYDRATATION : buvez suffisamment d'eau et limitez la consommation de boisson sucrées.</p>
+                <h3>C.surpoids:</h3>
+                <p>1.ADOPTER UNE ALIMENTATION SAINE:augmentez la consommation de fruits, de légumes et des grains entiers tout en réduisant les aliments riches en graisses saturées et en sucre.</p>
+                <p>2.ACTIVITEZ PHYSIQUE:engagez vous dans une activité physique réguliere comme la marche rapide,le vélo ou la natation ,idéalement au moins 150minutes/semaine.</p>
+                <p>3.FIXER DES OBJECTIFS REALISTES:établissez des objectifs de perte de poids graduels pour eviter les frustractions.</p>
+                <h3>D.obésite:</h3>
+                <p>1.CONSULTER UN PROFESSIONNEL DE SANTE:prenez rendez vous avec un médecin ou un diététicien pour mettre en place de gestion du poids adapté à votre situation.</p>
+                <p>2.SUIVRE UN REGIME ALIMENTAIRE:optez pour une alimentation controlée en calories et diversifiée,riche en nutriments.</p>
+                <p>3.INTEGRATION D'EXERCICES PHYSIQUES:Recherchez des programmes d'exercice adapté et qui vous plaisent.commencez lentement et augmentez progressivement l'intensité.</p>
+                <p>4.SURVEILLANCE MEDICALE:faites un suivi régulier pour surveiller d'éventuels complications liés à l'obesité et ajuster vos efforts si nécessaire.</p>
+            
+        <p></p>
+    </section>
 
 </body></html>
