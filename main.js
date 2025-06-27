@@ -30,25 +30,5 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.querySelectorAll("h2, h3").forEach((titre) => {
-  titre.addEventListener("mouseenter", () => {
-    titre.style.transform = "scale(1.05)";
-    titre.style.transition = "transform 0.3s ease";
-  });
-  titre.addEventListener("mouseleave", () => {
-    titre.style.transform = "scale(1)";
-  });
-});
-
-document.querySelectorAll("a[href^='#']").forEach((ancre) => {
-  ancre.addEventListener("click", function (e) {
-    e.preventDefault();
-    const cible = document.querySelector(this.getAttribute("href"));
-    if (cible) {
-      cible.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
-
-
-
+// Gestion de la fermeture du menu responsive mobile en cliquant à l'extérieur
+window.addEventListener("click", (event) => { 
